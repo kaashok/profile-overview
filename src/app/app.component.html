@@ -1,25 +1,36 @@
 <nav class="navbar bg-dark navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand nav-font-color">Ashok Kuduva Ananthan</a>
-  
-    <div class="collapse navbar-collapse">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link nav-font-color active">Profile Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-font-color">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-font-color">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-font-color">Certificates</a>
+        <li class="nav-item" *ngFor="let navItem of navItems">
+          <a class="nav-link nav-font-color" style="cursor: pointer;"
+            (click)="onClickNavItem(navItem.name)">{{navItem.name}}</a>
         </li>
       </ul>
     </div>
-  
+
   </div>
 </nav>
 
-<router-outlet></router-outlet>
+<ng-container *ngIf="getSelectedNavItem('Profile Overview')">
+  <app-profile-overview></app-profile-overview>
+</ng-container>
+
+<ng-container *ngIf="getSelectedNavItem('Experience')">
+  <app-experience-view></app-experience-view>
+</ng-container>
+
+<ng-container *ngIf="getSelectedNavItem('Projects')">
+  <app-projects-view></app-projects-view>
+</ng-container>
+
+<ng-container *ngIf="getSelectedNavItem('Certificates')">
+  <app-certificates-view></app-certificates-view>
+</ng-container>
