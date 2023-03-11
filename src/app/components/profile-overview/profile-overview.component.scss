@@ -1,0 +1,19 @@
+.profile-overview {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3.5em);    
+    background: url("../../../assets/background_5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;    
+    color: white;
+}
+
+.profile-skill-icon {
+    height: 30px;
+    width: 30px;
+}
