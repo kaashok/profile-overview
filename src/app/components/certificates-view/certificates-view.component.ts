@@ -6,7 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./certificates-view.component.scss']
 })
 export class CertificatesViewComponent implements OnInit {
-
+  certificates: any[] = [
+    {
+      title: 'Certificates',
+      certDetails: [
+        {
+          title: 'Azure Fundamentals',
+          icon: './assets/az900.png'
+        }
+      ]
+    }
+  ];
   constructor() { }
 
   ngOnInit(): void {

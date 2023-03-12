@@ -1,4 +1,4 @@
-.certificate-container {
+.sub-skill-container {
     overflow: hidden;
     background-color: #fff;
     border-radius: 6px;
@@ -8,10 +8,9 @@
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
-    cursor: pointer;
 }
 
-.certificate-logo {
+.skill-logo {
     width: 75px;
     height: 75px;
     display: block;
@@ -20,7 +19,7 @@
     margin-top: 5px;
 }
 
-.certificate-name {
+.skill-name {
     border-top: 1px solid #ebeef1;
     display: block;
     line-height: 1.6;

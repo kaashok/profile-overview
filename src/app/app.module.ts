@@ -10,6 +10,7 @@ import { CertificatesViewComponent } from './components/certificates-view/certif
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
+import { SkillsViewComponent } from './components/skills-view/skills-view.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatCardModule } from '@angular/material/card';
     ProfileOverviewComponent,
     ExperienceViewComponent,
     ProjectsViewComponent,
-    CertificatesViewComponent
+    CertificatesViewComponent,
+    SkillsViewComponent
   ],
   imports: [
     BrowserModule,

@@ -10,9 +10,16 @@ export class AppComponent {
   navItems: any[] = [
     { name: 'Profile Overview', isSelected: true, routerLink: '' },
     { name: 'Experience', isSelected: false },
-    { name: 'Projects', isSelected: false },
+    { name: 'Skills', isSelected: false },
+    // { name: 'Projects', isSelected: false },
     { name: 'Certificates', isSelected: false }
   ];
+
+  bShowToggleMenu = false;
+
+  onClickToggle() {
+    this.bShowToggleMenu = !this.bShowToggleMenu
+  }
 
   onClickNavItem(name: string) {
     const selectedItem = this.navItems.find(x => x.name === name);
@@ -23,6 +30,7 @@ export class AppComponent {
         navItem.isSelected = false;
       });
     }
+    this.bShowToggleMenu = false;
   }
 
   getSelectedNavItem(name: string) {

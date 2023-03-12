@@ -2,12 +2,13 @@
   <div class="container-fluid">
     <a class="navbar-brand nav-font-color">Ashok Kuduva Ananthan</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="onClickToggle()">
+      <span class="navbar-toggler-icon navbar-dark"></span>
     </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarContent">
+    <div class="collapse navbar-collapse" id="navbarContent" [ngClass]="bShowToggleMenu ? 'show-toggle-menu': '' ">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngFor="let navItem of navItems">
           <a class="nav-link nav-font-color" style="cursor: pointer;"
@@ -33,4 +34,8 @@
 
 <ng-container *ngIf="getSelectedNavItem('Certificates')">
   <app-certificates-view></app-certificates-view>
+</ng-container>
+
+<ng-container *ngIf="getSelectedNavItem('Skills')">
+  <app-skills-view></app-skills-view>
 </ng-container>

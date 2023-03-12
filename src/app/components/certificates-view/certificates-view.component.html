@@ -1,1 +1,21 @@
-<p>certificates-view works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 card-top" *ngFor="let cert of certificates">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title><span>{{cert.title}}</span></mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="row">
+                        <a href="https://www.credly.com/badges/0d01a941-d995-429c-9401-395c0a590f40/public_url">
+                            <div class="col-sm-4 certificate-container" *ngFor="let certDetail of cert.certDetails">
+                                <img [src]="certDetail.icon" class="certificate-logo">
+                                <span class="certificate-name">{{certDetail.title}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
