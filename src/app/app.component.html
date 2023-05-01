@@ -17,6 +17,8 @@
       </ul>
     </div>
 
+   
+
   </div>
 </nav>
 
@@ -38,4 +40,8 @@
 
 <ng-container *ngIf="getSelectedNavItem('Skills')">
   <app-skills-view></app-skills-view>
+</ng-container>
+
+<ng-container *ngIf="getSelectedNavItem('Contact')">
+  <app-contact-view></app-contact-view>
 </ng-container>
