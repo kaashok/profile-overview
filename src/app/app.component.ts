@@ -12,7 +12,8 @@ export class AppComponent {
     { name: 'Experience', isSelected: false },
     { name: 'Skills', isSelected: false },
     // { name: 'Projects', isSelected: false },
-    { name: 'Certificates', isSelected: false }
+    { name: 'Certificates', isSelected: false },
+    { name: 'Contact', isSelected: false }
   ];
 
   bShowToggleMenu = false;
