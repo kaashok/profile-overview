@@ -20,14 +20,13 @@ jobs:
         run: npm i
       
       - name: Build
-        run: npm run build:prod
+        run: npm run build
         
       - name: Deploy in Github Page
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
         with:
-          target_branch: deploy-code
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          build_configuration: 'production'
+          base_href: 'https://kaashok.github.io/profile-overview/'
+          deploy_branch: deploy-code
           build_dir: docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-   
