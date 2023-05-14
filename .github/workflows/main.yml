@@ -21,5 +21,13 @@ jobs:
       
       - name: Build
         run: npm run build:prod
+        
+      - name: Deploy in Github Page
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: deploy-code
+          build_dir: docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
    
