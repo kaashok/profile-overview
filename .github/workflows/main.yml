@@ -29,4 +29,4 @@ jobs:
           build_configuration: 'production'
           base_href: 'https://kaashok.github.io/profile-overview/'
           deploy_branch: deploy-code
-          build_dir: docs
+          angular_dist_build_folder: docs
