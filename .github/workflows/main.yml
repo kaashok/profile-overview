@@ -26,7 +26,8 @@ jobs:
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.4.0
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          build_configuration: 'production'
-          base_href: 'https://kaashok.github.io/profile-overview/'
-          deploy_branch: deploy-code
+          base_href: /profile-overview/
+          angular_project_dir: ./
+          build_configuration: production
+          deploy_branch:  deploy-code
           angular_dist_build_folder: docs
